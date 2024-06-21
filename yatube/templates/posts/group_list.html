@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load user_filters %}
+{% block title %}
+  Записи сообщества {{ group }}
+{% endblock %}
+{% block content %}
+  {% include 'posts/includes/search.html' %}
+  <h2>{{ group.title }}</h2>
+  <p>{{ group.description }}</p>
+  {% for post in page_obj %}
+    {% include 'posts/includes/post_card.html' %}
+    {% empty %}
+      <p>Постов в данной группе нет</p>
+  {% endfor %}
+  {% include 'posts/includes/paginator.html' %}
+{% endblock %}

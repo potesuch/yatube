@@ -1,0 +1,32 @@
+{% load thumbnail %}
+{% load user_filters %}
+<div class="card">
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5 class="card-title">
+        Автор:
+        <a href="{% url 'posts:profile' post.author %}">
+          {{ post.author.get_full_name|if_empty:post.author }}
+        </a>
+      </h5>
+      {% if post.group %}
+        <h6 class="card-subtitle">
+          Группа:
+          <a href="{% url 'posts:group_list' post.group.slug %}">
+            {{ post.group.title }}
+          </a>
+        </h6>
+      {% endif %}
+      <small class="text-muted">Дата публикации: {{ post.pub_date }}</small>
+    </div>
+    <div class="card-body">
+      {% thumbnail post.image "960x330" crop="center" upscale=True as im %}
+        <img src="{{ im.url }}" class="card-img my-2">
+      {% endthumbnail %}
+      <p class="card-text">{{ post.text }}</p>
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'posts:post_detail' post.id %}">подробная информация</a>
+    </div>
+  </div>
+</div>

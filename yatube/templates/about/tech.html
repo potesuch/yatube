@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+  Технологии
+{% endblock %}
+{% block content %}
+  <div class="row">
+    <h1>Текст бок</h1>
+    {% comment %}
+      Боковой блок
+      Займет всю ширину на мобильных
+      и 25% при размерах экрана >=768px
+    {% endcomment %}
+    <aside class="col-12 col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item">
+          Python
+        </li>
+        <li class="list-group-item">
+          Django
+        </li>
+      </ul>
+    </aside>
+    <article class="col-12 col-md-9">
+      <p>Текст страницы "Технологии"</p>
+    </article>
+  </div>
+{% endblock %}

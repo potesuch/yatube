@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}<title>Тест тайтл</title>{% endblock %}
+{% block content %}
+  <form method="POST" action="{% url 'posts:test' %}">
+    {% csrf_token %}
+    <label>Текст поста:</label>
+    <textarea class="form-control" rows="5" name="post_text"></textarea>
+    <br><br>
+    <label>Автор поста:</label>
+    <p><select class="form-control" size="" name="post_author">
+      <option disabled>Выберите автора</option>
+      {% for user in users %}
+        <option value="{{ user.username }}">{{ user.username }}</option>
+      {% endfor %}
+    </select></p>
+    <label>Группа поста:</label>
+    <p><select class="form-control" size="" name="post_group">
+      <option disabled>Выберите группу</option>
+      {% for group in groups %}
+        <option value="{{ group.title }}">{{ group.title }}</option>
+      {% endfor %}
+    </select></p>
+    <button class="btn btn-primary" type="submit">Запостить</button>
+  </form>
+{% endblock %}
