@@ -6,39 +6,39 @@
 
 # Установка
 
-    1.Клонируйте репозиторий:
+1.Клонируйте репозиторий:
 
-        ```sh
+    ```sh
 
-        git clone https://github.com/yourusername/yourproject.git
-        cd yourproject
-        ```
+    git clone https://github.com/yourusername/yourproject.git
+    cd yourproject
+    ```
 
-    2. Создайте виртуальное окружение и активируйте его:
+2. Создайте виртуальное окружение и активируйте его:
 
-        ```sh
+    ```sh
 
-        python -m venv venv
-        source venv/bin/activate  # Для Windows используйте `venv\Scripts\activate`
-        ```
+    python -m venv venv
+    source venv/bin/activate  # Для Windows используйте `venv\Scripts\activate`
+    ```
 
-    3. Установите зависимости:
+3. Установите зависимости:
 
-        ```sh
+    ```sh
 
-        pip install -r requirements.txt
-        ```
+    pip install -r requirements.txt
+    ```
 
-    4. Примените миграции:
+4. Примените миграции:
 
-        ```sh
+    ```sh
 
-        python manage.py migrate
-        ```
+    python manage.py migrate
+    ```
 
-    5. Запустите сервер разработки:
+5. Запустите сервер разработки:
 
-        ```sh
+    ```sh
 
-        python manage.py runserver
-        ```
+    python manage.py runserver
+    ```
