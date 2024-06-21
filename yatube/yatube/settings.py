@@ -60,7 +60,6 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'about.apps.AboutConfig',
     'api.apps.ApiConfig',
-    'cats.apps.CatsConfig',
 ]
 
 MIDDLEWARE = [
