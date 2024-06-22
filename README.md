@@ -10,8 +10,8 @@
 
     ```sh
 
-    git clone https://github.com/yourusername/yourproject.git
-    cd yourproject
+    git clone https://github.com/potesuch/yatube.git
+    cd yatube
     ```
 
 2. Создайте виртуальное окружение и активируйте его:
